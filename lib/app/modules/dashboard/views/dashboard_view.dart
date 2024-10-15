@@ -1,4 +1,5 @@
 import 'package:quranku/app/modules/home/views/home_view.dart';
+import 'package:quranku/app/modules/news/views/news_view.dart';
 import 'package:quranku/app/modules/signin/views/signin_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -862,7 +863,16 @@ class _DashboardViewState extends State<DashboardView> {
                         title: const Text('Notifikasi',
                             style: TextStyle(color: Colors.blue)),
                         onTap: () {
-                          Get.to(() => const NotifikasiView());
+                          Get.to(() =>  NotifikasiView());
+                        },
+                      ),
+                      ListTile(
+                        leading:
+                            const Icon(Icons.web, color: Colors.blue),
+                        title: const Text('News',
+                            style: TextStyle(color: Colors.blue)),
+                        onTap: () {
+                          Get.to(() =>  NewsView());
                         },
                       ),
                       ListTile(
@@ -1121,7 +1131,7 @@ class _DashboardViewState extends State<DashboardView> {
               onTap: () {
                 // Action when the "Terakhir Membaca" section is tapped
                 Get.to(
-                    () => const SurahView()); // Navigate to your desired view
+                    () => SurahView()); // Navigate to your desired view
               },
               child: Container(
                 padding: const EdgeInsets.all(16),
@@ -1158,7 +1168,7 @@ class _DashboardViewState extends State<DashboardView> {
                       onTap: () {
                         // Action when the book icon is tapped
                         Get.to(() =>
-                            const SurahView()); // Navigate to your desired view
+                            SurahView()); // Navigate to your desired view
                       },
                       child: const Icon(
                         Icons.book,
@@ -1199,7 +1209,9 @@ class _DashboardViewState extends State<DashboardView> {
                       trailing: Text(surah['arabic']!,
                           style: const TextStyle(color: Colors.white)),
                       onTap: () {
-                        // Action when the surat is clicked
+                        // Action when the book icon is tapped
+                        Get.to(
+                            () => SurahView()); // Navigate to your desired view
                       },
                     ),
                     const Divider(

@@ -1,23 +1,23 @@
 import 'package:get/get.dart';
 
 class SurahController extends GetxController {
-  //TODO: Implement SurahController
+  // An empty or normal controller doesn't contain any logic or variables
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
+    // No initialization logic
   }
 
   @override
   void onReady() {
     super.onReady();
+    // No logic when the controller is ready
   }
 
   @override
   void onClose() {
     super.onClose();
+    // No cleanup logic
   }
-
-  void increment() => count.value++;
 }

@@ -11,6 +11,7 @@ abstract class Routes {
   static const MENU = _Paths.MENU;
   static const MENUUU = _Paths.MENUUU;
   static const SETTINGS = _Paths.SETTINGS;
+  static const NEWS = _Paths.NEWS;
 }
 
 abstract class _Paths {
@@ -23,4 +24,5 @@ abstract class _Paths {
   static const MENU = '/menu';
   static const MENUUU = '/menuuu';
   static const SETTINGS = '/settings';
+  static const NEWS = '/news';
 }
